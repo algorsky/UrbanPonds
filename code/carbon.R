@@ -9,8 +9,12 @@ df = read_csv('data/210630_carbon.csv')  %>%
   mutate(date = as.Date(date))
 
 ponds<- df%>%
-  drop_na(date)
+  drop_na(date)%>%
+  factor(pond)
 
-
-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 
-git clone https://github.com/username/repo.git
+pondMean<- ponds%>%
+  group_by(pond)%>%
+  summarise(meanIC = mean(Results(IC)),
+            sdIC = sd(Results(IC)),
+            meanPOC = mean(Results(NPOC)),
+            sdPOC = sd(Results(NPOC)))
