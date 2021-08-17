@@ -5,18 +5,27 @@ library(lubridate)
 # Read in data 
 tempdo = read_csv('data/tempdo.csv') 
 
-
+#Specific Pond
 ggplot(dplyr::filter(tempdo, pond == 'ELV')) + 
   geom_point(aes(x = DO_mgL, y = Depth, color = DATE, size = 1.5)) +
-  geom_path(aes(x = Temp_C, color = DATE, y = Depth, group = DATE))+
+  geom_path(aes(x = DO_mgL, color = DATE, y = Depth, group = DATE))+
   scale_y_reverse(name = "Depth (m)") +
   scale_x_continuous(name = "Water Temperature (C)")+
   theme_bw()
-  
+
+#Facet Wrap  
 ggplot(data = tempdo) + 
-  geom_point(aes(x = DO_mgL, y = Depth, color = DATE, size = 0.5)) +
+  geom_point(aes(x = DO_mgL, y = Depth, color = DATE),size = 0.2) +
   geom_path(aes(x = DO_mgL, color = DATE, y = Depth, group = DATE))+
   scale_y_reverse(name = "Depth (m)") +
   facet_wrap(~pond)+
-  scale_x_continuous(name = "Water Temperature (C)")+
+  scale_x_continuous(name = ((expression(paste(O[2], " (mg " , L^-1,")")))))+
+  theme_bw()
+
+ggplot(data = tempdo) + 
+  geom_point(aes(x = Temp_C, y = Depth, color = DATE),size = 0.2) +
+  geom_path(aes(x = Temp_C, color = DATE, y = Depth, group = DATE))+
+  scale_y_reverse(name = "Depth (m)") +
+  facet_wrap(~pond)+
+  scale_x_continuous(name = ((expression("Temperature " ( degree*C)))))+
   theme_bw()
