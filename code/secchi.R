@@ -8,7 +8,7 @@ secchi = read_csv('data/secchi.csv')
 
 #Facet Wrap  
 ggplot(data = secchi) + 
-  geom_point(aes(x = DO_mgL, y = Depth, color = DATE),size = 0.2))
+  geom_point(aes(x = DO_mgL, y = Depth, color = DATE),size = 0.2)))
 
 
 
