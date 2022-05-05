@@ -142,10 +142,11 @@ gas_do<-gas_seasons%>%
   mutate(dissolvedN2O = dissolvedN2O*1000000)
 
 ggplot(dplyr::filter(gas_do, pond != "KP"))+
-  geom_point(aes(x = DO_mgL, y = dissolvedCH4))+
+  geom_point(aes(x = DO_mgL, y = dissolvedCH4, color = season), alpha = 0.3, size = 3)+
  # geom_smooth(aes(x = DO_mgL, y = dissolvedCH4))+
   ylab(expression(paste('Dissolved Methane (',mu,'mol ','L'^-1, ')')))+
   xlab(expression(paste("Surface O"[2], " (mg " , L^-1,")")))+
+  scale_color_manual(values = c("forestgreen", "blue2"))+
   theme_bw(base_size = 20)
 
 
