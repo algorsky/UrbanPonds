@@ -11,6 +11,30 @@ df = read_csv('data/carbon/carbon_summer21.csv')  %>%
 
 df$pond<- as.factor(df$pond)
 
+carbon<- df%>%
+  select(pond, date, DIC, DOC)%>%
+  pivot_longer(cols = c("DIC","DOC"),
+               names_to = "type",
+               values_to = "value")
+means.long<- melt(carbon, id.vars = "pond")
+  
+ggplot(df) +
+  stat_summary(aes(x = pond, y = DOC), fun = mean, geom = "bar")+
+  stat_summary(aes(x = pond, y = DIC), fun = mean, geom = "bar", position = "dodge")
+  geom_bar(stat = "identity", position="dodge")+
+  ylab(expression(paste('Carbon (mg','L'^-1, ')')))+
+  theme_bw(base_size = 12)+
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
+cols<- c("DIC" = "grey80", "DOC" = "black")
+carbon<-ggplot(carbon, aes(x=pond, y=value, color = factor(type), fill=factor(type))) + 
+    stat_summary(fun=mean, geom="bar",position=position_dodge(1)) + 
+    scale_color_manual("Carbon",values = cols, aesthetics = c("colour", "fill"))+
+  ylab(expression(paste('Carbon (mg','L'^-1, ')')))+
+  stat_summary(fun.min=min,fun.max=max,geom="errorbar",
+               color="black",position=position_dodge(1), width=.2)+
+  theme_bw(base_size = 12)+
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
+ggsave("figures/carbon.png", width = 8, height = 6, units = 'in', carbon)
 
 pondMean<- df%>%
   group_by(pond)%>%
