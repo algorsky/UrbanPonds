@@ -74,7 +74,7 @@ co2_plot<-ggplot(data = gas_seasons,aes(x = as.factor(pond), y = dissolvedCO2 *1
   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1), legend.position = "none")
 ggsave("figures/jasm/co2_full_figure.png", width = 11, height = 8.5, units = 'in', co2_plot)
 
-co2_arb<-ggplot(dplyr::filter(gas_seasons, pond == "LM-ARB"|pond == "UM-ARB"), aes(x = as.factor(pond), y = dissolvedCO2 *1000000, fill = season, alpha = 0.3))+
+ggplot(dplyr::filter(gas_seasons, pond == "HP-UW"), aes(x = as.factor(pond), y = dissolvedCO2 *1000000, fill = season, alpha = 0.3))+
   geom_boxplot(outlier.size = 0)+
   geom_point(pch = 21, position = position_jitterdodge())+
   geom_hline(yintercept = 0, alpha = 0.8)+
@@ -109,7 +109,7 @@ ch4_plot<-ggplot((gas_seasons), aes(x = as.factor(pond), y = dissolvedCH4 *10000
   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1), legend.position = "none")
 ggsave("figures/jasm/ch4_full_figure.png", width = 11, height = 8.5, units = 'in', ch4_plot)
 
-ch4_arb<-ggplot(dplyr::filter(gas_seasons, pond == "UM-ARB"|pond == "LM-ARB"), aes(x = as.factor(pond), y = dissolvedCH4 *1000000, fill = season, alpha = 0.3))+
+ch4_hp<-ggplot(dplyr::filter(gas_seasons, pond == "HP-UW"), aes(x = as.factor(pond), y = dissolvedCH4 *1000000, fill = season, alpha = 0.3))+
   geom_boxplot(outlier.size = 0)+
   geom_point(pch = 21, position = position_jitterdodge())+
   geom_hline(yintercept = 0, alpha = 0.8)+
@@ -118,7 +118,7 @@ ch4_arb<-ggplot(dplyr::filter(gas_seasons, pond == "UM-ARB"|pond == "LM-ARB"), a
   scale_fill_manual(values = c("forestgreen", "blue2"))+
   theme_bw(base_size = 20)+
   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1), legend.position = "none")
-ggsave("figures/jasm/c_KP.png", width = 6, height = 8, units = 'in')
+ggsave("figures/jasm/co2_HP.png", width = 6, height = 8, units = 'in')
 
 ch4_figure<-ch4_plot + ch4_kp + plot_layout(ncol=2,widths=c(4,1))
 
@@ -137,7 +137,7 @@ n2o_plot<-ggplot(gas_seasons, aes(x = as.factor(pond), y = dissolvedN2O *1000000
 
 #Temperature and Oxygen
 #Specific Pond
-ggplot(dplyr::filter(tempdo, pond == 'LM-ARB')) + 
+ggplot(dplyr::filter(tempdo, pond == 'HP-UW')) + 
   geom_point(aes(x = DO_mgL, y = Depth, color = as.factor(season), size = 1.5)) +
   geom_path(aes(x = DO_mgL, color = as.factor(season), y = Depth, group = DATE))+
   scale_y_reverse(name = "Depth (m)") +
@@ -145,7 +145,7 @@ ggplot(dplyr::filter(tempdo, pond == 'LM-ARB')) +
   scale_color_manual(values = c("forestgreen", "blue2"))+
   theme_bw(base_size = 20)+
   theme(legend.position = "none")
-ggsave("figures/jasm/O2_KP.png", width = 8, height = 6, units = 'in')
+ggsave("figures/jasm/O2_HP-UW.png", width = 8, height = 6, units = 'in')
 ggplot(dplyr::filter(tempdo, pond == 'UM-ARB')) + 
   geom_point(aes(x = Temp_C, y = Depth, color = as.factor(season), size = 1.5)) +
   geom_path(aes(x = Temp_C, color = as.factor(season), y = Depth, group = DATE))+
@@ -211,22 +211,24 @@ gas_do<-gas_seasons%>%
   mutate(dissolvedN2O = dissolvedN2O*1000000)%>%
   filter(pond != "KP")
 
-ggplot(gas_do)+
+ch4_do<-ggplot(gas_do)+
   geom_point(aes(x = DO_mgL, y = dissolvedCH4, color = season), alpha = 0.3, size = 3)+
-  geom_smooth(aes(x = DO_mgL, y = dissolvedCH4, group = season, color = season))+
+  #geom_smooth(aes(x = DO_mgL, y = dissolvedCH4, group = season, color = season))+
   ylab(expression(paste('Dissolved Methane (',mu,'mol ','L'^-1, ')')))+
   xlab(expression(paste("Surface O"[2], " (mg " , L^-1,")")))+
   scale_color_manual(values = c("forestgreen", "blue2"))+
   theme_bw(base_size = 20)+
   theme(legend.position = "")
-ggplot(gas_do)+
+co2_do<-ggplot(gas_do)+
   geom_point(aes(x = DO_mgL, y = dissolvedCO2, color = season), alpha = 0.3, size = 3)+
-  geom_smooth(aes(x = DO_mgL, y = dissolvedCO2, group = season, color = season))+
+  #geom_smooth(aes(x = DO_mgL, y = dissolvedCO2, group = season, color = season))+
   ylab(expression(paste('Dissolved Carbon Dioxide (',mu,'mol ','L'^-1, ')')))+
   xlab(expression(paste("Surface O"[2], " (mg " , L^-1,")")))+
   scale_color_manual(values = c("forestgreen", "blue2"))+
   theme_bw(base_size = 20)
-ggsave("figures/jasm/O2_CH4.png", width = 7, height = 6, units = 'in')
+
+ch4_do+co2_do +plot_layout(guides = "collect")
+ggsave("figures/jasm/O2_GHG.png", width = 16, height = 8, units = 'in')
 fit_ch4<- gas_do%>%
   group_by(season)%>%
   do(glance(lm(dissolvedCH4~DO_mgL, .)))

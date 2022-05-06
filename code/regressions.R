@@ -31,13 +31,17 @@ development<-ggplot(lc)+
   xlab("")+
   theme_bw(base_size = 16)+
   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
+ggsave("figures/jasm/lc.png", width = 10, height = 6, units = 'in', development)
 
-age<-ggplot(lc)+
+
+age<-ggplot(dplyr::filter(lc, pond != "KP"))+
   geom_point(aes(x = pond, y = Pond.Age), size = 4)+
   ylab("Pond Age")+
   xlab("")+
   theme_bw(base_size = 16)+
   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
+ggsave("figures/jasm/age.png", width = 10, height = 6, units = 'in', age)
+
 
 depth<-ggplot(extra)+
   geom_boxplot(aes(x = pond, y = Zmax))+
