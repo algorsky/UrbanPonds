@@ -3,7 +3,7 @@ library(devtools)
 library(lubridate)
 
 # Read in data 
-secchi = read_csv('data/secchi.csv') 
+secchi = read_csv('data/ancillary/secchi.csv') 
 
 depth<- secchi%>%
   group_by(pond_id)%>%

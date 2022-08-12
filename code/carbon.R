@@ -11,6 +11,8 @@ df = read_csv('data/carbon/carbon_summer21.csv')  %>%
 
 df$pond<- as.factor(df$pond)
 
+#write_csv(df, 'data/carbon/summer21.csv')
+
 carbon<- df%>%
   select(pond, date, DIC, DOC)%>%
   pivot_longer(cols = c("DIC","DOC"),

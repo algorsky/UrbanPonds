@@ -8,7 +8,11 @@ chloro = read_csv('data/chlorophyll/chloro_all.csv')  %>%
   filter(sample_id != "BLA")%>%
   separate(col = sample_id, into = c('pond','date'), sep = "_", remove = FALSE)%>%
   mutate(date = ymd(date))%>%
-  mutate(day = format(date, format = "%m-%d"))
+  mutate(day = format(date, format = "%m-%d"))%>%
+  distinct()
+  
+
+write_csv(chloro, 'data/chlorophyll/chloro_clean.csv')
 
 chloro_summary<- chloro%>%
   group_by(year(date))%>%

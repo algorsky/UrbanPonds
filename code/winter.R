@@ -2,7 +2,7 @@ library(tidyverse)
 library(devtools)
 library(lubridate)
 library(patchwork)
-# Read in data for SSB
+# Read in data for winter ice
 icesnow = read_csv('data/winter/ice.csv')
 ice<- icesnow%>%
   select(Pond, Date, avsnow, blackice, whiteice)%>%
@@ -29,3 +29,13 @@ ice<-ggplot(ice_snow, aes(x = as.Date(doy, origin = as.Date('2021-01-01')), y = 
   theme_bw(base_size = 12)
 
 ggsave("figures/ice.png", width = 8, height = 6, units = 'in', ice)
+
+
+# Read in data for temp_do
+temp_do = read_csv('data/winter/temp_do.csv')
+
+temp_do<- temp_do%>%
+  mutate(sampling = ifelse(DATE > "2022-01-11" & DATE < "2022-01-15", 1,
+                           ifelse(DATE > "2022-01-26"& DATE < "2022-02-01", 2,3)))
+
+

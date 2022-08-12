@@ -36,4 +36,11 @@ ggplot(dplyr::filter(tss, Pond == "KP"))+
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 ggsave("figures/jasm/TSS_KP.png", width = 8, height = 6, units = 'in')
 
+tss_statistics<- tss%>%
+  group_by(Pond, year(Date))%>%
+  summarise(mean_TSS_mgL = mean(TSS_gL * 1000),
+            OM_perc = mean(OM_perc),
+            sd_TSS = sd(TSS_gL * 1000))
 
+ggplot(tss_statistics)+
+  
