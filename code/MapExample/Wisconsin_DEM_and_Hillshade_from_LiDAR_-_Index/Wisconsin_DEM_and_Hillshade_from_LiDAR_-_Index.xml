@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="UTF-8"?><MD_Metadata xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:xalan="http://xml.apache.org/xalan" xmlns:srv="http://www.isotc211.org/2005/srv" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gml="http://www.opengis.net/gml" xmlns="http://www.isotc211.org/2005/gmd">
+    <fileIdentifier>
+        <gco:CharacterString>a757b936cbdb43e0b48490b0a9aa6328</gco:CharacterString>
+    </fileIdentifier>
+    <characterSet>
+        <MD_CharacterSetCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_CharacterSetCode" codeListValue="utf8" codeSpace="ISOTC211/19115">utf8</MD_CharacterSetCode>
+    </characterSet>
+    <hierarchyLevel>
+        <MD_ScopeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_ScopeCode" codeListValue="dataset" codeSpace="ISOTC211/19115">dataset</MD_ScopeCode>
+    </hierarchyLevel>
+    <hierarchyLevelName>
+        <gco:CharacterString>dataset</gco:CharacterString>
+    </hierarchyLevelName>
+    <contact>
+        <CI_ResponsibleParty>
+            <organisationName>
+                <gco:CharacterString>Wisconsin Department of Natural Resources, Bureau of Technology Services - GIS Section</gco:CharacterString>
+            </organisationName>
+            <positionName>
+                <gco:CharacterString>GIS Data Specialist</gco:CharacterString>
+            </positionName>
+            <contactInfo>
+                <CI_Contact>
+                    <onlineResource>
+                        <CI_OnlineResource>
+                            <linkage>
+                                <URL>https://dnr.wi.gov/feedback</URL>
+                            </linkage>
+                        </CI_OnlineResource>
+                    </onlineResource>
+                </CI_Contact>
+            </contactInfo>
+            <role>
+                <CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="pointOfContact" codeSpace="ISOTC211/19115">pointOfContact</CI_RoleCode>
+            </role>
+        </CI_ResponsibleParty>
+    </contact>
+    <dateStamp>
+        <gco:Date>2019-01-15</gco:Date>
+    </dateStamp>
+    <metadataStandardName>
+        <gco:CharacterString>ISO 19139 Geographic Information - Metadata - Implementation Specification</gco:CharacterString>
+    </metadataStandardName>
+    <metadataStandardVersion>
+        <gco:CharacterString>2007</gco:CharacterString>
+    </metadataStandardVersion>
+    <identificationInfo>
+        <MD_DataIdentification>
+            <citation>
+                <CI_Citation>
+                    <title>
+                        <gco:CharacterString>DEM and Hillshade from LiDAR - Index</gco:CharacterString>
+                    </title>
+                    <date>
+                        <CI_Date>
+                            <date>
+                                <gco:Date>2019-01-02</gco:Date>
+                            </date>
+                            <dateType>
+                                <CI_DateTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_DateTypeCode" codeListValue="creation" codeSpace="ISOTC211/19115">creation</CI_DateTypeCode>
+                            </dateType>
+                        </CI_Date>
+                    </date>
+                    <date>
+                        <CI_Date>
+                            <date>
+                                <gco:Date>2020-02-06</gco:Date>
+                            </date>
+                            <dateType>
+                                <CI_DateTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_DateTypeCode" codeListValue="revision" codeSpace="ISOTC211/19115">revision</CI_DateTypeCode>
+                            </dateType>
+                        </CI_Date>
+                    </date>
+                </CI_Citation>
+            </citation>
+            <abstract>
+                <gco:CharacterString>This service provides an Index intended for use with the WI DNR Image Services DEM from LiDAR (Units in Meters), DEM from LiDAR (Units in Feet), and Hillshade from LiDAR, all updated last updated January 2, 2019. The Index provides information about Flight Year of source LiDAR data and Resolution of Digital Elevation Models (DEMs) and Hillshades that display in those image services, with coverage provided for 67 Wisconsin counties.Details:29 counties with 3-Meter resolution DEMs: Adams (2010), Barron (2005), Burnett (2015), Chippewa (2012), Columbia (2011), Crawford (2010/2011), Door (2002), Dunn (2008), Eau Claire (2013), Grant (2011), Green (2011), Iowa (2010), Jackson (2015), Juneau (2010), Lafayette (2011), Marathon (2012), Monroe (2010), Oconto (2005), Outagamie (2005), Pepin (2013), Pierce (2015), Polk (2015), Richland (2010), Rusk (2011), Sauk (2011), Trempealeau (2014), Vernon (2010), Waupaca (2005), &amp;amp; Wood (2015). 9 counties with 2-meter resolution DEMs: Brown (2010), Calumet (2005), Dodge (2005), Fond du Lac (2011), Green Lake (2009), Jefferson (2005), Racine (2010), Rock (2011), &amp;amp; Winnebago (2014); also the City of Oshkosh and portions of adjacent Townships (2009). 1 county with a 10-foot resolution DEM: Kewaunee (2012). 1 county with a 5-foot resolution DEM: Kenosha (2011). 24 counties with 1-meter resolution DEMs: Ashland (2014), Bayfield (2016), Buffalo (2016), Dane (2017), Douglas (2016), Florence (2017), Forest (2017), Iron (2015), La Crosse (2017), Lincoln (2015), Manitowoc (2015), Marinette (2014), Oneida (2013), Portage (2016), Saint Croix (2014), SEWRPC 2015 (including Milwaukee, Ozaukee, Walworth, Washington, &amp;amp; Waukesha), Shawano (2015), Sheboygan (1.5-meter DEM, 2004), Taylor (2016), &amp;amp; Washburn (2016). 3 counties with 2-foot resolution DEM: Waushara (2017 – Preliminary version), Langlade (2017) &amp;amp; Sawyer (2017). The primary source of the linework in this Index is a WI County Boundaries data layer derived from 1:24,000-scale sources. The delineations of DEM/Hillshade extent provided through this Index are approximate and may not reflect the precise extent of the source LiDAR data from which the DEMs and Hillshades are derived. For more information, visit https://dnr.wi.gov/feedback/ and choose Geographic Information Systems Data as the subject.</gco:CharacterString>
+            </abstract>
+            <purpose>
+                <gco:CharacterString>Flight Year and DEM Resolution Index for Wisconsin DNR's LiDAR-Derived DEM and Hillshade Image Services</gco:CharacterString>
+            </purpose>
+            <credit>
+                <gco:CharacterString>Wisconsin Department of Natural Resources, USDA Natural Resources Conservation Service, USGS, FEMA, the Southeastern WI Regional Planning Commission, 67 Wisconsin Counties listed in service description</gco:CharacterString>
+            </credit>
+            <descriptiveKeywords>
+                <MD_Keywords>
+                    <keyword>
+                        <gco:CharacterString>Wisconsin</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>DEM</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>Elevation</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>Hillshade</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>Department of Natural Resources</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>WDNR</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>WI DNR</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>index</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>land cover</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>natural resources</gco:CharacterString>
+                    </keyword>
+                </MD_Keywords>
+            </descriptiveKeywords>
+            <descriptiveKeywords>
+                <MD_Keywords>
+                    <keyword>
+                        <gco:CharacterString>Wisconsin</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>DEM</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>Elevation</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>Hillshade</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>Department of Natural Resources</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>WDNR</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>WI DNR</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>index</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>land cover</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>natural resources</gco:CharacterString>
+                    </keyword>
+                </MD_Keywords>
+            </descriptiveKeywords>
+            <descriptiveKeywords>
+                <MD_Keywords>
+                    <keyword>
+                        <gco:CharacterString>Wisconsin</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>DEM</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>Elevation</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>Hillshade</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>Department of Natural Resources</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>WDNR</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>WI DNR</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>index</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>land cover</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>natural resources</gco:CharacterString>
+                    </keyword>
+                </MD_Keywords>
+            </descriptiveKeywords>
+            <descriptiveKeywords>
+                <MD_Keywords>
+                    <keyword>
+                        <gco:CharacterString>Wisconsin</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>DEM</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>Elevation</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>Hillshade</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>Department of Natural Resources</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>WDNR</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>WI DNR</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>index</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>land cover</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>natural resources</gco:CharacterString>
+                    </keyword>
+                </MD_Keywords>
+            </descriptiveKeywords>
+            <descriptiveKeywords>
+                <MD_Keywords>
+                    <keyword>
+                        <gco:CharacterString>Wisconsin</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>DEM</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>Elevation</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>Hillshade</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>Department of Natural Resources</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>WDNR</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>WI DNR</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>index</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>land cover</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>natural resources</gco:CharacterString>
+                    </keyword>
+                </MD_Keywords>
+            </descriptiveKeywords>
+            <descriptiveKeywords>
+                <MD_Keywords>
+                    <keyword>
+                        <gco:CharacterString>Wisconsin</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>DEM</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>Elevation</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>Hillshade</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>Department of Natural Resources</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>WDNR</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>WI DNR</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>index</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>land cover</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>natural resources</gco:CharacterString>
+                    </keyword>
+                </MD_Keywords>
+            </descriptiveKeywords>
+            <descriptiveKeywords>
+                <MD_Keywords>
+                    <keyword>
+                        <gco:CharacterString>Wisconsin</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>DEM</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>Elevation</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>Hillshade</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>Department of Natural Resources</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>WDNR</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>WI DNR</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>index</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>land cover</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>natural resources</gco:CharacterString>
+                    </keyword>
+                </MD_Keywords>
+            </descriptiveKeywords>
+            <descriptiveKeywords>
+                <MD_Keywords>
+                    <keyword>
+                        <gco:CharacterString>Wisconsin</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>DEM</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>Elevation</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>Hillshade</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>Department of Natural Resources</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>WDNR</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>WI DNR</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>index</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>land cover</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>natural resources</gco:CharacterString>
+                    </keyword>
+                </MD_Keywords>
+            </descriptiveKeywords>
+            <descriptiveKeywords>
+                <MD_Keywords>
+                    <keyword>
+                        <gco:CharacterString>Wisconsin</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>DEM</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>Elevation</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>Hillshade</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>Department of Natural Resources</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>WDNR</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>WI DNR</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>index</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>land cover</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>natural resources</gco:CharacterString>
+                    </keyword>
+                </MD_Keywords>
+            </descriptiveKeywords>
+            <descriptiveKeywords>
+                <MD_Keywords>
+                    <keyword>
+                        <gco:CharacterString>Wisconsin</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>DEM</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>Elevation</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>Hillshade</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>Department of Natural Resources</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>WDNR</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>WI DNR</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>index</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>land cover</gco:CharacterString>
+                    </keyword>
+                    <keyword>
+                        <gco:CharacterString>natural resources</gco:CharacterString>
+                    </keyword>
+                </MD_Keywords>
+            </descriptiveKeywords>
+            <resourceConstraints>
+                <MD_Constraints>
+                    <useLimitation>
+                        <gco:CharacterString>see https://dnr.wi.gov/legal for information on using DNR data.</gco:CharacterString>
+                    </useLimitation>
+                </MD_Constraints>
+            </resourceConstraints>
+            <resourceConstraints>
+                <MD_LegalConstraints>
+                    <accessConstraints>
+                        <MD_RestrictionCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_RestrictionCode" codeListValue="otherRestrictions" codeSpace="ISOTC211/19115">otherRestrictions</MD_RestrictionCode>
+                    </accessConstraints>
+                    <otherConstraints>
+                        <gco:CharacterString>Other Constraints</gco:CharacterString>
+                    </otherConstraints>
+                </MD_LegalConstraints>
+            </resourceConstraints>
+            <resourceConstraints>
+                <MD_LegalConstraints>
+                    <useConstraints>
+                        <MD_RestrictionCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_RestrictionCode" codeListValue="otherRestrictions" codeSpace="ISOTC211/19115">otherRestrictions</MD_RestrictionCode>
+                    </useConstraints>
+                    <otherConstraints>
+                        <gco:CharacterString>Other Constraints</gco:CharacterString>
+                    </otherConstraints>
+                </MD_LegalConstraints>
+            </resourceConstraints>
+            <language>
+                <LanguageCode codeList="http://www.loc.gov/standards/iso639-2/php/code_list.php" codeListValue="eng" codeSpace="ISO639-2">eng</LanguageCode>
+            </language>
+            <characterSet>
+                <MD_CharacterSetCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_CharacterSetCode" codeListValue="utf8" codeSpace="ISOTC211/19115">utf8</MD_CharacterSetCode>
+            </characterSet>
+            <topicCategory>
+                <MD_TopicCategoryCode>elevation</MD_TopicCategoryCode>
+            </topicCategory>
+        </MD_DataIdentification>
+    </identificationInfo>
+    <distributionInfo>
+        <MD_Distribution>
+            <transferOptions>
+                <MD_DigitalTransferOptions>
+                    <onLine>
+                        <CI_OnlineResource>
+                            <linkage>
+                                <URL>https://dnrmaps.wi.gov/arcgis_image/rest/services/DW_Map_Dynamic/EN_DEM_from_LiDAR_Index/MapServer/0</URL>
+                            </linkage>
+                        </CI_OnlineResource>
+                    </onLine>
+                    <onLine>
+                        <CI_OnlineResource>
+                            <linkage>
+                                <URL>https://www.arcgis.com/home/item.html?id=a757b936cbdb43e0b48490b0a9aa6328</URL>
+                            </linkage>
+                            <name>
+                                <gco:CharacterString>Metadata (Item Details)</gco:CharacterString>
+                            </name>
+                            <function>
+                                <CI_OnLineFunctionCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_OnLineFunctionCode" codeListValue="download" codeSpace="ISOTC211/19115">download</CI_OnLineFunctionCode>
+                            </function>
+                        </CI_OnlineResource>
+                    </onLine>
+                </MD_DigitalTransferOptions>
+            </transferOptions>
+        </MD_Distribution>
+    </distributionInfo>
+</MD_Metadata>

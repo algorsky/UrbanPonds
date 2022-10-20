@@ -2,19 +2,29 @@ library(ggmap)
 library(tidyverse)
 library(sf)
 
-sites<- read_csv("data/sites.csv")
+sites<- read_csv("data/ancillary/sites.csv")
+
 
 sites_sf <- st_as_sf(sites, coords = c("Longitude", "Latitude"), crs = 4326)
+#myLocation<- c(-89.55, 43, -89.24, 43.13)
 
 if(!requireNamespace("devtools")) install.packages("devtools")
 devtools::install_github("dkahle/ggmap", ref = "tidyup")
 register_google(key = "AIzaSyC8tGJ9a-bGzr4Y8TL9mYIkymgQUewvlG4")
 
-qmap<- get_map(c(left = -89.55, right = -89.24, bottom = 43.0, top = 43.13), source="google", maptype='roadmap', color="bw")
+myMap<- get_map(location = myLocation, source="google", maptype="hybrid")
 
 
-map<- ggmap(qmap) +
-  geom_point(data = sites, mapping = aes(x = Longitude, y = Latitude, color = as.factor(Pair)), shape = 20, size=5)+
+myLocation<- c(-89.5, 43, -89, 43.5)
+myMap <- get_map("madison",maptype="hybrid", zoom = 11)
+ggmap(myMap)
+
+ggma
+
+ggmap(myMap) +
+  geom_point(data = sites, mapping = aes(x = Longitude, y = Latitude),shape = 20, size=5, alpha = 0.8)+
+
   theme_void()+theme(legend.position = "none")
+ggsave("figures/satellite_sitemap.png", width = 8, height = 6, units = 'in')
 
 ggsave("figures/AllSiteMap.png", width = 8, height = 6, units = 'in', map)
